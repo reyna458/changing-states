@@ -131,14 +131,17 @@ textarea {
  .shirley {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 2em;
   grid-template-rows: 1fr;
   align-items: center;
+  height: 100%;
  }
 
  .shirleyshow {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 2fr;
+  grid-gap: 2em;
   height: 100%;
   max-height: 650px;
   align-items: start;
@@ -159,8 +162,8 @@ textarea {
   margin-right: 2.5%;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
-  height: 100%;
-  max-height: 100px;
+  height: 80%;
+  max-height: 150px;
   width: 80%;
   justify-self: left;
   grid-column: 1;
@@ -199,8 +202,8 @@ textarea {
  }
 
  .shirleyshow > .txt {
-  height: 100%;
-  max-height: 400px;
+  height: 80%;
+  max-height: 600px;
   grid-column: 1;
   grid-row: 1 / span 2;
   display: grid;
@@ -522,7 +525,7 @@ h5 {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 624px) {
   .shirleyshow {
     max-height: 400px;
   }
