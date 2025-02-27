@@ -84,7 +84,13 @@ $(document).ready(function() {
                 $('#warning').addClass('activewarning')
                 console.log('no cherries')
                 $('#bighead').html("Watch out!")
-            }
+
+                let cherryId = $(this).find('.name').html()
+                if (cherryId === `DIY Shirley Temple in a Bear Cup`) {
+                    console.log('meow')
+                    $('#warnp').html("This one has no cherries. But I made it, so give me a little grace here. Please.")
+                    }
+                }
 
            
             let grenBalance = $(this).find('#gren').val()
