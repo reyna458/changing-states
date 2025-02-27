@@ -521,3 +521,36 @@ h5 {
     filter: brightness(0) saturate(100%) invert(14%) sepia(63%) saturate(6924%) hue-rotate(15deg) brightness(78%) contrast(126%);
   }
 }
+
+@media (max-width: 400px) {
+  .shirleyshow {
+    max-height: 400px;
+  }
+  .txt {
+    max-height: 300px;
+  } 
+
+  .shirleyshow {
+    display: block;
+  }
+
+  .cherries {
+    display: none;
+  }
+
+  .shirleyshow.rate {
+    display: none;
+  }
+
+  .shirleyshow.txt {
+    max-height: 600px;
+  }
+
+  .barshow {
+    display: none;
+  }
+
+  #warning.activewarning {
+    display: none;
+  }
+}
