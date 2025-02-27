@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+* {
+  cursor: url(../images/single-cherry.png),auto;
+}
+
+#body {
+background: rgb(231,211,169);
+background: linear-gradient(185deg, rgba(231,211,169,1) 0%, rgba(200,1,40,1) 70%);
+font-family: "Pixelify Sans", serif;
+}
+
+#body.lite {
+  background: rgb(255,249,237);
+background: linear-gradient(180deg, rgba(255,249,237,1) 4%, rgba(231,211,169,1) 71%, rgba(200,1,40,1) 100%);
+}
+
+#body.med {
+  background: rgb(255,249,237);
+background: linear-gradient(180deg, rgba(255,249,237,1) 4%, rgba(200,1,40,1) 100%);
+}
+
+
+
+html, body {
+  /* this just stops the horizontal scroll */
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 1fr;
+  color: #CD263E;
+}
+
+header img {
+  z-index: -1;
+  grid-column: 1 / span 1;
+  position: absolute;
+  width: 100%;
+  margin-left: -.5%;
+  margin-right: -.5%;
+  margin-top: -.5%;
+  overflow: hidden;
+}
+
+#shirley-headleft {
+  grid-column: 1;
+  text-align: left;
+}
+
+#shirley-headright {
+  grid-column: 2;
+  text-align: right;
+}
+
+.balance-bar {
+  display: none;
+}
+
+.balance-bar img {
+  max-height: 0;
+  z-index: 100;
+}
+
+.barshow {
+  display: inline;
+}
+
+.barshow img {
+  max-height: 75%;
+  position: fixed;
+  right: 10vh;
+ }
+
+.barshow h2 {
+  visibility: visible;
+  max-height: 100px;
+ }
+
+#toptext {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+ }
+
+#toptext h2 {
+  grid-column: 2;
+  color: #CD263E;
+  font-size: 48px;
+  animation: hover 2s infinite ease-in-out;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#toptext h2:hover {
+  animation: hover 2s infinite ease-in-out;
+  animation: colors 1s infinite ease-in-out
+}
+
+textarea {
+  max-height: 0px;
+  visibility: hidden;
+}
+
+#btn {
+  grid-column: 1;
+ }
+
+ .toptext img {
+  grid-column: 3;
+ }
+
+ .img.hidden {
+  display: none;
+ }
+
+ #shirleylist {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  justify-content: center;
+ }
+
+ .shirley {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+ }
+
+ .shirleyshow {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  max-height: 650px;
+  align-items: start;
+  justify-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  max-width: 80%;
+ }
+
+ .shirleyshow > .rate {
+  margin-right: 0;
+ }
+
+ .txt {
+  background-color: #CD263E;
+  border-radius: 25px;
+  border: #E5CBA4 15px solid;
+  margin-left: 15%;
+  margin-right: 2.5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  height: 100%;
+  max-height: 100px;
+  width: 80%;
+  justify-self: left;
+  grid-column: 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.599);
+ }
+
+ .shirleyhide {
+  display: none;
+ }
+
+ #back-btn {
+  transform: rotate(90deg);
+ }
+
+ #return {
+  margin-left: 5%;
+  color: white;
+  justify-self: left;
+ }
+
+ #return img {
+  grid-column: 1;
+ }
+
+ #return p {
+ float: right;
+  text-decoration: underline;
+ }
+
+ #return.hidden {
+  display: none;
+ }
+
+ .shirleyshow > .txt {
+  height: 100%;
+  max-height: 400px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  width: 100%;
+  margin-left: 0;
+}
+
+.date {
+  display: none;
+  color: white;
+  font-family: "Tiny5", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.info {
+  display: none;
+  color: white;
+  /* grid-column: 1; */
+}
+
+.shirleyshow > .txt > .info {
+  display: block;
+  grid-column: 1 /span 2;
+  margin-left: 5%;
+  grid-row: 2 / span 2;
+}
+
+.shirleyshow > .txt > .date {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.shirleyshow > .txt img {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  /* align-self: center; */
+  min-width: 30%;
+}
+
+#grentitle {
+  display: none;
+}
+
+#grentitle.titleactive {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  padding: 3%;
+  /* background-color: yellow; */
+  right: 15vh;
+  /* transform: translateX(110vh) translateY(-2vh); */
+  border-radius: 25px;
+  background-color: #CD263E;
+  border: white solid 25px;
+  color: white;
+  font-size: 32px;
+  font-family: "Tiny5", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 32px;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+ #temple-art {
+  width: 50px;
+  align-self: center;
+  justify-self: center;
+ }
+
+
+
+ .shirleyshow > #templeart {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+ }
+
+ .name {
+  grid-column: 1;
+  color: white;
+  margin-left: 2.5%;
+  font-size: 24px;
+ }
+
+ .cherry {
+  display: none;
+ }
+
+ .shirleyshow > .cherry {
+  display: block;
+  color: white;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+ }
+
+ #gren {
+  display: none;
+ }
+
+ .rate.abovesix {
+  background-color: #83D071;
+ }
+
+ .rate {
+  grid-column: 2;
+  background-color: #CD263E;
+  border: white solid 15px;
+  border-radius: 25px;
+  height: 60%;
+  width: 100%;
+  max-width: 100px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-right: 15%;
+  color: white;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.599);
+ }
+
+ .rate h3 {
+  font-size: 48px;
+  margin: 0;
+  font-family: "Tiny5", serif;
+  font-weight: 400;
+  font-style: normal;
+ }
+
+ #warning {
+  display: none;
+ }
+
+ #warning.activewarning {
+  background-color: black;
+  z-index: 999;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  height: 100%;
+  max-height: 500px;;
+  border: white solid 25px;
+  border-radius: 75px;
+  margin-bottom: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+ }
+
+ #warning img {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  max-width: 300px;
+  margin: 5%;
+  align-self: center;
+  justify-self: center;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(219deg) brightness(102%) contrast(104%);
+  animation: warningfilter 2s infinite;
+ }
+
+ #warning div {
+  display: grid;
+ }
+
+ #warn-text {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  color: white;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+ #warn-text h6 {
+  font-size: 64px;
+  margin: 1em;
+  margin-left: 0;
+ }
+
+ #warn-text p {
+  font-size: 24px;
+ }
+
+ #warn-options {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  align-self: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+ #yes {
+  grid-column: 1;
+  text-decoration: underline;
+  align-self: center;
+ }
+
+ #yes:hover {
+  color: red;
+  font-size: 30px;
+ }
+
+ #no:hover {
+  color: red;
+  font-size: 30px;
+ }
+
+ #no {
+  grid-column: 2;
+  text-decoration: underline;
+  align-self: center;
+ }
+
+
+ @keyframes hover {
+  10% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+ }
+
+@keyframes colors {
+  10% {
+    color: red;
+  }
+
+  20% {
+    color: blueviolet;
+  }
+
+  30% {
+    color: green;
+  }
+
+  40% {
+    color: yellow;
+  }
+
+  50% {
+    color: orange;
+  }
+
+  60% {
+    color: pink;
+  }
+
+  70% {
+    color: indigo;
+  }
+
+  80% {
+    color: yellow;
+  }
+
+  90% {
+    color: skyblue;
+  }
+
+  100% {
+    color:#E5CBA4;
+  }
+}
+
+@keyframes warningfilter {
+  25% {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(63%) saturate(6924%) hue-rotate(15deg) brightness(78%) contrast(126%);
+  }
+
+  50% {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(219deg) brightness(102%) contrast(104%);
+  }
+
+  75%  {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(63%) saturate(6924%) hue-rotate(15deg) brightness(78%) contrast(126%);
+  }
+}
