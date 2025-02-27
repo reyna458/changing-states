@@ -118,13 +118,13 @@ $(document).ready(function() {
         });
 
 
-        $('#yes').click(function () {
+        $('#yescontainer').click(function () {
             $('#warning').removeClass('activewarning')
             $('#bighead').html("Shirley Selected")
             
         })
 
-        $('#no').click(function () {
+        $('#nocontainer').click(function () {
             $('.shirleyshow').addClass('shirley')
             $('.shirleyshow').removeClass('shirleyshow')
             $('.shirleyhide').removeClass('shirleyhide')
